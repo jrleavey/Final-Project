@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,12 +28,19 @@ public class PlayerController : MonoBehaviour
     public AudioClip winSound;
     public GameObject winScreen;
     public GameObject loseScreen;
-    public GameObject pCamera;
+
     public bool isLightOn = true;
+    public GameObject fLight;
+
 
     public GameObject playerCamera;
     public GameObject monsterCamera;
     public bool playerCamOn = true;
+    public GameObject monsterFilter;
+
+    public Rigidbody throwablePrefab;
+    public Transform throwSpawnPoint;
+    public float force = 100;
 
     void Start()
     {
@@ -44,6 +52,8 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         CameraSwap();
+        FlashLight();
+        ThrowDistraction();
 
     }
     private void Movement()
@@ -79,7 +89,6 @@ public class PlayerController : MonoBehaviour
     {
         loseScreen.SetActive(true);
         Time.timeScale = 0;
-        pCamera.GetComponent<MouseLook>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -88,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.tag == "Win")
         {
-            pCamera.GetComponent<MouseLook>().enabled = false;
+            
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             winScreen.SetActive(true);
@@ -103,12 +112,40 @@ public class PlayerController : MonoBehaviour
             playerCamera.SetActive(false);
             monsterCamera.SetActive(true);
             playerCamOn = false;
+            monsterFilter.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.G) && playerCamOn == false)
         {
             monsterCamera.SetActive(false);
             playerCamera.SetActive(true);
             playerCamOn = true;
+            monsterFilter.SetActive(false);
         }
+    }
+    public void FlashLight()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && isLightOn == true)
+        {
+            fLight.SetActive(false);
+            isLightOn = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.F) && isLightOn == false)
+        {
+            fLight.SetActive(true);
+            isLightOn = true;
+        }
+    }
+    public void ThrowDistraction()
+    {
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // Instantiate a prefab object
+            var throwableinstance = Instantiate(throwablePrefab, throwSpawnPoint.position, throwSpawnPoint.rotation);
+            throwableinstance.AddForce(throwSpawnPoint.forward * force);
+        }
+        // it needs to bounce off on non ground objects
+        // despawn after 3 seconds
+        // reference monster AI to update waypoint system.
     }
 }
