@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody throwablePrefab;
     public Transform throwSpawnPoint;
     public float force = 100;
+
+    public bool collectedBlanket = false;
+    public bool collectedTeddy = false;
+    public bool collectedStoryBook = false;
 
     void Start()
     {
@@ -104,6 +109,19 @@ public class PlayerController : MonoBehaviour
             AudioSource.PlayClipAtPoint(winSound, transform.position);
             Time.timeScale = 0;
         }
+        if (other.gameObject.CompareTag("Teddy"))
+        {
+            collectedTeddy = true;  
+        }
+        if (other.gameObject.CompareTag("Blanket"))
+        {
+            collectedBlanket = true;  
+        }
+        if (other.gameObject.CompareTag("StoryBook"))
+        {
+            collectedStoryBook = true;  
+        }
+
     }
     public void CameraSwap()
     {
