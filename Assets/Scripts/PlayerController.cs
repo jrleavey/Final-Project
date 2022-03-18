@@ -111,15 +111,21 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Teddy"))
         {
-            collectedTeddy = true;  
+            collectedTeddy = true;
+            other.gameObject.SetActive(false);
+            SceneManager.LoadScene("HubLevel");
         }
         if (other.gameObject.CompareTag("Blanket"))
         {
-            collectedBlanket = true;  
+            collectedBlanket = true;
+            other.gameObject.SetActive(false);
+            SceneManager.LoadScene("HubLevel");
         }
         if (other.gameObject.CompareTag("StoryBook"))
         {
-            collectedStoryBook = true;  
+            collectedStoryBook = true;
+            other.gameObject.SetActive(false);
+            SceneManager.LoadScene("HubLevel");
         }
 
     }
