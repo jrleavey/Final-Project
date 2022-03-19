@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody throwablePrefab;
     public Transform throwSpawnPoint;
     public float force = 100;
+    public bool canThrow = true;
 
     public bool collectedBlanket = false;
     public bool collectedTeddy = false;
@@ -162,14 +163,22 @@ public class PlayerController : MonoBehaviour
     public void ThrowDistraction()
     {
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && canThrow == true)
         {
             // Instantiate a prefab object
             var throwableinstance = Instantiate(throwablePrefab, throwSpawnPoint.position, throwSpawnPoint.rotation);
             throwableinstance.AddForce(throwSpawnPoint.forward * force);
+            canThrow = false;
+            StartCoroutine(CoolDownTimer());
         }
         // it needs to bounce off on non ground objects
         // despawn after 3 seconds
         // reference monster AI to update waypoint system.
+    }
+
+    public IEnumerator CoolDownTimer()
+    {
+        yield return new WaitForSeconds(5f);
+        canThrow = true;
     }
 }

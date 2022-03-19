@@ -26,8 +26,10 @@ public class AISeeing : MonoBehaviour
     public float maxWaitBetweenPlays = 20f;
     public float waitTimeCountdown = -1f;
     public GameObject winMenu;
+    public Transform distractionCollisionPoint;
 
     public Vector3 distractionPos;
+    public bool isDistractionCollided = false;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -54,9 +56,16 @@ public class AISeeing : MonoBehaviour
 
     void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f && canSeePlayer == false && isChasingPlayer == false)
+        if (!agent.pathPending && agent.remainingDistance < 0.5f && canSeePlayer == false && isChasingPlayer == false && isDistractionCollided == false)
         {
             Patrolling();
+        }
+        if (isDistractionCollided == true && canSeePlayer == false && isChasingPlayer == false)
+        {
+            agent.destination = distractionCollisionPoint.position;
+            StartCoroutine(WaitToPatrol());
+            isDistractionCollided = false;
+
         }
         if (canSeePlayer == true || isChasingPlayer == true)
         {
@@ -161,5 +170,9 @@ public class AISeeing : MonoBehaviour
         {
             waitTimeCountdown -= Time.deltaTime;
         }
+    }
+    public IEnumerator WaitToPatrol()
+    {
+        yield return new WaitForSeconds(2f);
     }
 }

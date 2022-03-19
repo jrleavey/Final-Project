@@ -127,3 +127,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 100
   rgb: {fileID: 4494356986359796799}
+  monster: {fileID: 0}
+  collisionPosition: {fileID: 4494356986359796803}

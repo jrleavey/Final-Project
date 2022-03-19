@@ -535,6 +535,7 @@ MonoBehaviour:
   throwablePrefab: {fileID: 4494356986359796799, guid: f47783403b2b375408047e7e7264474c, type: 3}
   throwSpawnPoint: {fileID: 1390353650}
   force: 1000
+  canThrow: 1
   collectedBlanket: 0
   collectedTeddy: 0
   collectedStoryBook: 0
@@ -693,7 +694,7 @@ GameObject:
   - component: {fileID: 567428805}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -924,7 +925,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638901010}
-  m_LocalRotation: {x: 0.106946774, y: -0.000000017634209, z: 0.0000000018968003, w: 0.9942648}
+  m_LocalRotation: {x: 0.106946774, y: 0.000000017634214, z: -0.000000001896801, w: 0.9942648}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1144,7 +1145,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.12496659, y: -0.000000017597118, z: 0.000000002216372, w: 0.992161}
+  m_LocalRotation: {x: 0.12496659, y: 0.000000017597118, z: -0.000000002216372, w: 0.992161}
   m_LocalPosition: {x: 0, y: 2.8082967, z: -3.0099998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1465,7 +1466,9 @@ MonoBehaviour:
   maxWaitBetweenPlays: 20
   waitTimeCountdown: -1
   winMenu: {fileID: 0}
+  distractionCollisionPoint: {fileID: 0}
   distractionPos: {x: 0, y: 0, z: 0}
+  isDistractionCollided: 0
 --- !u!1 &1155716700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1940,7 @@ GameObject:
   - component: {fileID: 1564374748}
   - component: {fileID: 1564374747}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Code Notes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1995,9 +1998,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Tech Demo Notes:\nWASD to move\nMove Camera with Mouse\nPress \"F\" to
-    turn Flashlight on and off\nPress \"E\" to throw a distraction. \nPress \"G\"
-    To see from the Monster's POV\n"
+  m_Text: "Tech Demo Notes:\nWASD to move.\nMove Camera with Mouse.\nPress \"F\"
+    to turn Flashlight on and off.\nPress \"E\" to throw a distraction. \nPress \"G\"
+    To see from the Monster's POV.\n"
 --- !u!222 &1564374748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2096,7 +2099,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692882202}
-  m_LocalRotation: {x: 0.124966584, y: -0.0000000175969, z: 0.000000002216399, w: 0.992161}
+  m_LocalRotation: {x: 0.124966584, y: 0.0000000175969, z: -0.000000002216399, w: 0.992161}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -6,14 +6,16 @@ public class Throwable : MonoBehaviour
 {
     public float _speed = 100;
     public Rigidbody rgb;
+    public GameObject monster;
+    public Transform collisionPosition;
     // Start is called before the first frame update
     private void Awake()
     {
-
+        monster = GameObject.Find("Monster");
     }
     void Start()
     {
-        Movement();
+        //Movement();
         StartCoroutine(DespawnTimer());
     }
 
@@ -32,5 +34,15 @@ public class Throwable : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            monster.GetComponent<AISeeing>().distractionCollisionPoint = collisionPosition;
+            monster.GetComponent<AISeeing>().isDistractionCollided = true;
+            Debug.Log("Hit the Ground");
+        }
     }
 }
