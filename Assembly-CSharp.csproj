@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CCEECD95-B9AF-DADE-A1FC-80F0A0B7D8D4}</ProjectGuid>
+    <ProjectGuid>{4ABD25F2-7453-1E14-1C63-BCE00338D1E5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,8 +60,8 @@
     <Compile Include="Assets\Scripts\AIInvis.cs" />
     <Compile Include="Assets\Scripts\AISeeing.cs" />
     <Compile Include="Assets\Scripts\AIHearing.cs" />
-    <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\PlayerWinObjects.cs" />

@@ -703,6 +703,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bfdb79c1729e743aa8d74a009a1e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 377168024}
+  cam: {fileID: 963194228}
+  speed: 6
+  gravity: -9.81
+  jumpHeight: 3
+  groundCheck: {fileID: 1036125629}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  turnSmoothTime: 0.1
+  winSound: {fileID: 0}
+  winScreen: {fileID: 0}
+  loseScreen: {fileID: 0}
+  isLightOn: 1
+  fLight: {fileID: 2035564462}
+  playerCamera: {fileID: 2067747988}
+  monsterCamera: {fileID: 158818490}
+  playerCamOn: 1
+  monsterFilter: {fileID: 2092549124}
+  throwablePrefab: {fileID: 4494356986359796799, guid: f47783403b2b375408047e7e7264474c, type: 3}
+  throwSpawnPoint: {fileID: 1390353650}
+  force: 1000
+  collectedBlanket: 0
+  collectedTeddy: 0
+  collectedStoryBook: 0
 --- !u!1 &402168115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1506,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d958f480af39241a784a36446031fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points:
+  - {fileID: 1155716704}
+  - {fileID: 1724833175}
+  - {fileID: 1187906550}
+  - {fileID: 402168119}
+  player: {fileID: 377168027}
+  isPatrolling: 1
+  radius: 20
+  angle: 90
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  ObstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  canSeePlayer: 0
+  isChasingPlayer: 0
+  ambientSound: {fileID: 0}
+  minWaitBetweenPlays: 14
+  maxWaitBetweenPlays: 20
+  waitTimeCountdown: -1
+  winMenu: {fileID: 0}
 --- !u!1 &1155716700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,6 +2274,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1564374745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564374746}
+  - component: {fileID: 1564374748}
+  - component: {fileID: 1564374747}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1564374746
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564374745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1782434544}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 185, y: -79}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1564374747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564374745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Tech Demo Notes:\nWASD to move\nMove Camera with Mouse\nPress \"F\" to
+    turn Flashlight on and off\nPress \"E\" to throw a distraction. \nPress \"G\"
+    To see from the Monster's POV\n"
+--- !u!222 &1564374748
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564374745}
+  m_CullTransparentMesh: 1
 --- !u!1 &1644873077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2758,7 @@ RectTransform:
   m_Children:
   - {fileID: 2092549125}
   - {fileID: 1902065817}
+  - {fileID: 1564374746}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
