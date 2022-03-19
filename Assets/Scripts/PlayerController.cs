@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
 
-    public float speed = 6;
+    public float speed = 10;
     public float gravity = -9.81f;
     public float jumpHeight = 3;
     Vector3 velocity;

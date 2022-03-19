@@ -6,7 +6,6 @@ public class Throwable : MonoBehaviour
 {
     public float _speed = 100;
     public Rigidbody rgb;
-
     // Start is called before the first frame update
     private void Awake()
     {

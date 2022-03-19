@@ -27,6 +27,7 @@ public class AISeeing : MonoBehaviour
     public float waitTimeCountdown = -1f;
     public GameObject winMenu;
 
+    public Vector3 distractionPos;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
