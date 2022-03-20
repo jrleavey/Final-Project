@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Demo (Code).unity
+- path: Assets/Scenes/Art Test Level.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
