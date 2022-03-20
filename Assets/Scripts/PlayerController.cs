@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public Transform cam;
 
     public float speed = 10;
+    public float speedSprint = 14;
     public float gravity = -9.81f;
     public float jumpHeight = 3;
     Vector3 velocity;
@@ -61,6 +62,16 @@ public class PlayerController : MonoBehaviour
         FlashLight();
         ThrowDistraction();
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
     private void Movement()
     {
@@ -89,6 +100,15 @@ public class PlayerController : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = speedSprint;
+        }
+        else
+        {
+            speed = 10;
         }
     }
     public void CaughtByMonster()

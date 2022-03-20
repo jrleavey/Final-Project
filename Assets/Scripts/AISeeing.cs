@@ -81,7 +81,6 @@ public class AISeeing : MonoBehaviour
             radius = 20;
             angle = 90;
         }
-        //AmbientSounds();
         if (winMenu.activeInHierarchy)
         {
             AudioSource.Stop();

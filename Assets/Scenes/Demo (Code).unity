@@ -515,6 +515,7 @@ MonoBehaviour:
   controller: {fileID: 377168024}
   cam: {fileID: 963194228}
   speed: 10
+  speedSprint: 14
   gravity: -9.81
   jumpHeight: 3
   groundCheck: {fileID: 1036125629}
@@ -732,7 +733,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 55ebcd0cce237064ca8a78de65ef80f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -925,7 +926,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638901010}
-  m_LocalRotation: {x: 0.106946774, y: 0.000000017634214, z: -0.000000001896801, w: 0.9942648}
+  m_LocalRotation: {x: 0.106946774, y: -0.000000017634212, z: 0.0000000018968007, w: 0.9942648}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1145,7 +1146,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.12496659, y: 0.000000017597118, z: -0.000000002216372, w: 0.992161}
+  m_LocalRotation: {x: 0.12496659, y: -0.000000017597118, z: 0.000000002216372, w: 0.992161}
   m_LocalPosition: {x: 0, y: 2.8082967, z: -3.0099998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2000,7 +2001,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Tech Demo Notes:\nWASD to move.\nMove Camera with Mouse.\nPress \"F\"
     to turn Flashlight on and off.\nPress \"E\" to throw a distraction. \nPress \"G\"
-    To see from the Monster's POV.\n"
+    to see from the Monster's POV.\nPress \"R\" to reset the level as needed.\nPress
+    \"Escape\" to exit the application.\nHold \"LShift\" to sprint.\n"
 --- !u!222 &1564374748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2099,7 +2101,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692882202}
-  m_LocalRotation: {x: 0.124966584, y: 0.0000000175969, z: -0.000000002216399, w: 0.992161}
+  m_LocalRotation: {x: 0.124966584, y: -0.0000000175969, z: 0.000000002216399, w: 0.992161}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2173,7 +2175,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706458917}
-  m_LocalRotation: {x: 0.14299282, y: 0.000000019039634, z: -0.0000000027507985, w: 0.98972374}
+  m_LocalRotation: {x: 0.14299281, y: 5.4172026e-15, z: -8.945514e-16, w: 0.98972374}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2472,7 +2474,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 55ebcd0cce237064ca8a78de65ef80f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2771,7 +2773,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 55ebcd0cce237064ca8a78de65ef80f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3220,11 +3222,11 @@ MonoBehaviour:
   m_BindingMode: 0
   m_SplineCurvature: 0.2
   m_Orbits:
-  - m_Height: 3
+  - m_Height: 5
     m_Radius: 9
   - m_Height: 2
     m_Radius: 7
-  - m_Height: 1
+  - m_Height: -1
     m_Radius: 3
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
