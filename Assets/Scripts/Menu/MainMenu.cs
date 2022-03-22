@@ -2,9 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Animator transitionAnim;
+
+    public Button playButton;
+
+    public float transitionTime = 1.5f;
+    
+    
+    void Start()
+    {
+        transitionAnim = GetComponent<Animator> ();  
+        playButton.onClick.AddListener(TaskOnClick);
+    }
     
     public void PlayGame ()
     {
@@ -39,5 +51,35 @@ public class MainMenu : MonoBehaviour
             Application.Quit();
             Debug.Log("Escape Quit!");
         }
+
     }
+
+    
+    
+
+    public void TaskOnClick()
+    {
+        
+        if(playButton != null)
+        {
+            transitionAnim.Play ("fadeMenuEnd");
+            LoadNextLevel();
+        }
+
+    }
+
+    public void LoadNextLevel()
+    {
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
+        //PlayGame();
+    }
+
+    IEnumerator LoadScene(int levelIndex)
+    {
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
+
+    }
+
 }
