@@ -134,19 +134,31 @@ public class PlayerController : MonoBehaviour
         {
             collectedTeddy = true;
             other.gameObject.SetActive(false);
-            SceneManager.LoadScene("HubLevel");
+            SceneManager.LoadScene("HUB");
         }
         if (other.gameObject.CompareTag("Blanket"))
         {
             collectedBlanket = true;
             other.gameObject.SetActive(false);
-            SceneManager.LoadScene("HubLevel");
+            SceneManager.LoadScene("HUB");
         }
         if (other.gameObject.CompareTag("StoryBook"))
         {
             collectedStoryBook = true;
             other.gameObject.SetActive(false);
-            SceneManager.LoadScene("HubLevel");
+            SceneManager.LoadScene("HUB");
+        }
+        if (other.gameObject.CompareTag("Level 1"))
+        {
+            SceneManager.LoadScene("Lvl 1");
+        }
+        if (other.gameObject.CompareTag("Level 2"))
+        {
+            SceneManager.LoadScene("Lvl 2");
+        }
+        if (other.gameObject.CompareTag("Level 3"))
+        {
+            SceneManager.LoadScene("Lvl 3");
         }
 
     }
