@@ -3,7 +3,17 @@ guid: 8d9bc88bab70cb04fa00f3326c550d62
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face_mat
+    second: {fileID: 2100000, guid: fe7b8ffc6ab615f4abcf4b233b828982, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fur_mat
+    second: {fileID: 2100000, guid: 6e3a0f9c3bc20cf488e6e108170bb1fc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
