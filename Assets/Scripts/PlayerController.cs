@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
 
-    public float speed = 10;
-    public float speedSprint = 14;
+    public float speed = 2;
+    public float speedSprint = 4;
     public float gravity = -9.81f;
     public float jumpHeight = 3;
     Vector3 velocity;
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            speed = 10;
+            speed = 2;
         }
     }
     public void CaughtByMonster()
@@ -130,37 +130,6 @@ public class PlayerController : MonoBehaviour
             AudioSource.PlayClipAtPoint(winSound, transform.position);
             Time.timeScale = 0;
         }
-        if (other.gameObject.CompareTag("Teddy"))
-        {
-            collectedTeddy = true;
-            other.gameObject.SetActive(false);
-            SceneManager.LoadScene("HUB");
-        }
-        if (other.gameObject.CompareTag("Blanket"))
-        {
-            collectedBlanket = true;
-            other.gameObject.SetActive(false);
-            SceneManager.LoadScene("HUB");
-        }
-        if (other.gameObject.CompareTag("StoryBook"))
-        {
-            collectedStoryBook = true;
-            other.gameObject.SetActive(false);
-            SceneManager.LoadScene("HUB");
-        }
-        if (other.gameObject.CompareTag("Level 1"))
-        {
-            SceneManager.LoadScene("Lvl 1");
-        }
-        if (other.gameObject.CompareTag("Level 2"))
-        {
-            SceneManager.LoadScene("Lvl 2");
-        }
-        if (other.gameObject.CompareTag("Level 3"))
-        {
-            SceneManager.LoadScene("Lvl 3");
-        }
-
     }
     public void CameraSwap()
     {

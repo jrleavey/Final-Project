@@ -10,17 +10,17 @@ public class LoadZone : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-       if (other.gameObject.CompareTag("Attic"))
+        if (other.tag == "Player" && this.tag == "Bed")
         {
-            SceneManager.LoadScene("AtticLevel");
+            SceneManager.LoadScene("Lvl 1");
         }
-       if (other.gameObject.CompareTag("Bed"))
+        if (other.tag == "Player" && this.tag == "Closet")
         {
-            SceneManager.LoadScene("BedLevel");
+            SceneManager.LoadScene("Lvl 2");
         }
-       if (other.gameObject.CompareTag("Closet"))
+        if (other.tag == "Player" && this.tag == "CrawlSpace")
         {
-            SceneManager.LoadScene("ClosetLevel");
+            SceneManager.LoadScene("Lvl 3");
         }
     }
 }
