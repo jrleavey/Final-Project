@@ -9,6 +9,9 @@ TagManager:
   - Level 2
   - Level 3
   - Bed
+  - StoryBook
+  - 'Teddy '
+  - Blanket
   layers:
   - Default
   - TransparentFX
