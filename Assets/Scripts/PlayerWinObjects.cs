@@ -10,20 +10,23 @@ public class PlayerWinObjects : MonoBehaviour
     public bool collectedStoryBook = false;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Blanket"))
+        if (other.tag == "Player" && this.tag == "Blanket")
         {
+            other.gameObject.SetActive(false);
             collectedBlanket = true;
-            SceneManager.LoadScene("HubLevel");
+            SceneManager.LoadScene("HUB");
         }
-        if (other.gameObject.CompareTag("Teddy"))
+        if (other.tag == "Player" && this.tag == "Teddy")
         {
+            other.gameObject.SetActive(false);
             collectedTeddy = true;
-            SceneManager.LoadScene("HubLevel");
+            SceneManager.LoadScene("HUB");
         }
-        if (other.gameObject.CompareTag("StoryBook"))
+        if (other.tag == "Player" && this.tag == "StoryBook")
         {
+            other.gameObject.SetActive(false);
             collectedStoryBook = true;
-            SceneManager.LoadScene("HubLevel");
+            SceneManager.LoadScene("HUB");
         }
     }
 }
