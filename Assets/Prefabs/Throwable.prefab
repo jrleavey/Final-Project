@@ -129,3 +129,4 @@ MonoBehaviour:
   rgb: {fileID: 4494356986359796799}
   monster: {fileID: 0}
   collisionPosition: {fileID: 4494356986359796803}
+  collisionSound: {fileID: 8300000, guid: 19ffb75f27058ea47a013d937df13ecf, type: 3}

@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private AudioSource AudioSource;
     public AudioClip winSound;
+    public AudioClip loseSound;
     public GameObject winScreen;
     public GameObject loseScreen;
 
@@ -45,7 +46,10 @@ public class PlayerController : MonoBehaviour
     public float Tforce = 800;
     public bool canThrow = true;
     public bool isGameOver = false;
-
+    public GameObject brMusic;
+    public GameObject winBook;
+    public bool isWalking = false;
+    public Animator animator;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -67,6 +71,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             Application.Quit();
+        }
+        if (isWalking == true)
+        {
+            animator.SetBool("IsMoving", true);
+        }
+        else if (isWalking == false)
+        {
+            animator.SetBool("IsMoving", false);
         }
 
     }
@@ -94,9 +106,13 @@ public class PlayerController : MonoBehaviour
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
-
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -111,21 +127,23 @@ public class PlayerController : MonoBehaviour
     public void CaughtByMonster()
     {
         loseScreen.SetActive(true);
-        Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         isGameOver = true;
+        AudioSource.PlayClipAtPoint(loseSound, transform.position);
+
     }
     public void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Win")
         {
-            Time.timeScale = 0;
             isGameOver = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             winScreen.SetActive(true);
+            brMusic.SetActive(false);
+            winBook.SetActive(false);
             AudioSource.PlayClipAtPoint(winSound, transform.position);
         }
     }

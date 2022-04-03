@@ -8,6 +8,7 @@ public class Throwable : MonoBehaviour
     public Rigidbody rgb;
     public GameObject monster;
     public Transform collisionPosition;
+    public AudioClip collisionSound;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class Throwable : MonoBehaviour
             monster.GetComponent<AISeeing>().distractionCollisionPoint = collisionPosition;
             monster.GetComponent<AISeeing>().isDistractionCollided = true;
             Debug.Log("Hit the Ground");
+            AudioSource.PlayClipAtPoint(collisionSound, transform.position);
         }
     }
 }
