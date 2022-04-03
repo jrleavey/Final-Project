@@ -42,12 +42,9 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody throwablePrefab;
     public Transform throwSpawnPoint;
-    public float force = 100;
+    public float Tforce = 800;
     public bool canThrow = true;
-
-    public bool collectedBlanket = false;
-    public bool collectedTeddy = false;
-    public bool collectedStoryBook = false;
+    public bool isGameOver = false;
 
     void Start()
     {
@@ -117,18 +114,19 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        isGameOver = true;
     }
     public void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Win")
         {
-            
+            Time.timeScale = 0;
+            isGameOver = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             winScreen.SetActive(true);
             AudioSource.PlayClipAtPoint(winSound, transform.position);
-            Time.timeScale = 0;
         }
     }
     public void CameraSwap()
@@ -168,7 +166,7 @@ public class PlayerController : MonoBehaviour
         {
             // Instantiate a prefab object
             var throwableinstance = Instantiate(throwablePrefab, throwSpawnPoint.position, throwSpawnPoint.rotation);
-            throwableinstance.AddForce(throwSpawnPoint.forward * force);
+            throwableinstance.AddForce(throwSpawnPoint.forward * Tforce);
             canThrow = false;
             StartCoroutine(CoolDownTimer());
         }

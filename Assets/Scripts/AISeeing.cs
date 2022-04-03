@@ -25,7 +25,6 @@ public class AISeeing : MonoBehaviour
     public float minWaitBetweenPlays = 14f;
     public float maxWaitBetweenPlays = 20f;
     public float waitTimeCountdown = -1f;
-    public GameObject winMenu;
     public Transform distractionCollisionPoint;
 
     public Vector3 distractionPos;
@@ -73,7 +72,7 @@ public class AISeeing : MonoBehaviour
         }
         if (playerref.GetComponent<PlayerController>().isLightOn == true)
         {
-            radius = 40;
+            radius = 30;
             angle = 180;
         }
         if (playerref.GetComponent<PlayerController>().isLightOn == false)
@@ -81,9 +80,10 @@ public class AISeeing : MonoBehaviour
             radius = 20;
             angle = 90;
         }
-        if (winMenu.activeInHierarchy)
+
+        if (playerref.GetComponent<PlayerController>().isGameOver == true)
         {
-            AudioSource.Stop();
+            Destroy(this.gameObject);
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -15,17 +15,17 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         transitionAnim = GetComponent<Animator> ();  
-        playButton.onClick.AddListener(TaskOnClick);
+        //playButton.onClick.AddListener(TaskOnClick);
     }
     
     public void PlayGame ()
     {
-        SceneManager.LoadScene("HUB");
+        transitionAnim.Play("fadeMenuEnd");
+        SceneManager.LoadScene("Lvl 1");
     }
 
     public void QuitGame ()
     {
-        Debug.Log("Quit!");
         Application.Quit();
     }
 
@@ -48,7 +48,6 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
             Debug.Log("Escape Quit!");
         }
 
