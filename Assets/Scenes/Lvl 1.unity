@@ -12082,25 +12082,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109686425}
   m_CullTransparentMesh: 1
---- !u!1 &111186161 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 876762846992643677, guid: c29200a6bff650f48b0016634a66aa40, type: 3}
-  m_PrefabInstance: {fileID: 962798136}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &111186164
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111186161}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.14913802
-  m_Height: 0.45651606
-  m_Direction: 1
-  m_Center: {x: -0.0027306394, y: 0.21585986, z: 0.00078923197}
 --- !u!1 &111919661
 GameObject:
   m_ObjectHideFlags: 0
@@ -12734,7 +12715,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133542745}
-  m_LocalRotation: {x: -0.04487061, y: 0.92150575, z: -0.112011954, w: -0.36914378}
+  m_LocalRotation: {x: -0.04487061, y: 0.92150575, z: -0.11201196, w: -0.36914378}
   m_LocalPosition: {x: 535.43787, y: 276.16998, z: -107.69751}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -40909,7 +40890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5cc0da04a8ddda64695e178b990348e1, type: 3}
       propertyPath: m_TagString
-      value: StoryBook
+      value: Win
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc0da04a8ddda64695e178b990348e1, type: 3}
@@ -42413,7 +42394,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2013284945}
+      - m_Target: {fileID: 41043243}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -88285,6 +88266,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &1524119414
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524119409}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.10707625
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0.0069803894, y: 0, z: 0.01130867}
 --- !u!1001 &1525251317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89046,7 +89041,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545786742}
-  m_LocalRotation: {x: -0.038166415, y: 0.92338616, z: -0.09527606, w: -0.36989707}
+  m_LocalRotation: {x: -0.03816641, y: 0.92338616, z: -0.09527606, w: -0.36989707}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -95001,7 +94996,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784633156}
-  m_LocalRotation: {x: -0.044870604, y: 0.92150575, z: -0.11201194, w: -0.3691438}
+  m_LocalRotation: {x: -0.044870604, y: 0.92150575, z: -0.11201195, w: -0.3691438}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
