@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour
     public Transform cam;
 
     public float speed = 2;
-    public float speedSprint = 4;
+    public float speedSprint = 14;
     public float gravity = -9.81f;
     public float jumpHeight = 3;
     Vector3 velocity;
     bool isGrounded;
+
+    public bool isSprinting;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -118,11 +120,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = speedSprint;
+            //isSprinting = true;    code I tried to use for sprintbar
         }
         else
         {
             speed = 2;
+            //isSprinting = false;  code I tried to use for sprintbar
         }
+        
+        
+
     }
     public void CaughtByMonster()
     {
