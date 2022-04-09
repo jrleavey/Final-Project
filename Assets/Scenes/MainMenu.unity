@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &140039481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -351,8 +351,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Avoid the monster at all costs! \nFind and collecting the comfort item
-    to escape the nightmare!"
+  m_Text: "Avoid the monster at all costs! \nFind and collect the comfort item to
+    escape from the nightmare!"
 --- !u!222 &195693708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &197884716
 MonoBehaviour:
   m_ObjectHideFlags: 0
