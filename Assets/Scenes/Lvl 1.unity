@@ -97325,6 +97325,7 @@ MonoBehaviour:
   speedSprint: 6
   gravity: -9.81
   jumpHeight: 3
+  isSprinting: 0
   groundCheck: {fileID: 1173057095}
   groundDistance: 0.4
   groundMask:
@@ -97350,6 +97351,10 @@ MonoBehaviour:
   winBook: {fileID: 80540965}
   isWalking: 0
   animator: {fileID: 1760967960}
+  maxStamina: 5
+  currentStamina: 0
+  maxBattery: 15
+  currentBattery: 0
 --- !u!143 &1760967962
 CharacterController:
   m_ObjectHideFlags: 0

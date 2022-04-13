@@ -52,11 +52,21 @@ public class PlayerController : MonoBehaviour
     public GameObject winBook;
     public bool isWalking = false;
     public Animator animator;
+
+    public float maxStamina = 5;
+    public float currentStamina;
+
+    public float maxBattery= 15;
+    public float currentBattery;
+
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         playerCamera.SetActive(true);
         monsterCamera.SetActive(false);
+        currentStamina = 5;
+        currentBattery = 15;
     }
     void Update()
     {
@@ -83,6 +93,36 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsMoving", false);
         }
 
+        if (currentStamina <= 0)
+        {
+            currentStamina = 0;
+        }
+
+        if (currentStamina>= 5)
+        {
+            currentStamina = 5;
+        }
+
+        if (currentBattery <= 0)
+        {
+            currentBattery = 0;
+            isLightOn = false;
+            fLight.SetActive(false);
+        }
+
+        if (currentBattery >= 15)
+        {
+            currentBattery = maxBattery;
+        }
+
+        if (isLightOn == true)
+        {
+            currentBattery -= Time.deltaTime;
+        }
+        else if (isLightOn == false)
+        {
+            currentBattery += Time.deltaTime;
+        }
     }
     private void Movement()
     {
@@ -117,14 +157,17 @@ public class PlayerController : MonoBehaviour
             isWalking = false;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && currentStamina > 0)
         {
             speed = speedSprint;
+            currentStamina-= Time.deltaTime;
             //isSprinting = true;    code I tried to use for sprintbar
         }
         else
         {
-            speed = 2;
+            speed = 4;
+            currentStamina+= Time.deltaTime;
+            
             //isSprinting = false;  code I tried to use for sprintbar
         }
         
@@ -178,7 +221,7 @@ public class PlayerController : MonoBehaviour
             fLight.SetActive(false);
             isLightOn = false;
         }
-        else if (Input.GetKeyDown(KeyCode.F) && isLightOn == false)
+       else if (Input.GetKeyDown(KeyCode.F) && isLightOn == false)
         {
             fLight.SetActive(true);
             isLightOn = true;
