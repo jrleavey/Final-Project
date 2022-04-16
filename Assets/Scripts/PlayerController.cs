@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
             isWalking = false;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && currentStamina > 0)
+        if (Input.GetKey(KeyCode.LeftShift) || (Input.GetKey(KeyCode.JoystickButton8)) && currentStamina > 0)
         {
             speed = speedSprint;
             currentStamina-= Time.deltaTime;
@@ -213,6 +213,20 @@ public class PlayerController : MonoBehaviour
             playerCamOn = true;
             monsterFilter.SetActive(false);
         }
+        if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == true)
+        {
+            playerCamera.SetActive(false);
+            monsterCamera.SetActive(true);
+            playerCamOn = false;
+            monsterFilter.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == false)
+        {
+            monsterCamera.SetActive(false);
+            playerCamera.SetActive(true);
+            playerCamOn = true;
+            monsterFilter.SetActive(false);
+        }
     }
     public void FlashLight()
     {
@@ -222,6 +236,16 @@ public class PlayerController : MonoBehaviour
             isLightOn = false;
         }
        else if (Input.GetKeyDown(KeyCode.F) && isLightOn == false)
+        {
+            fLight.SetActive(true);
+            isLightOn = true;
+        }
+        if (Input.GetKeyDown(KeyCode.JoystickButton2) && isLightOn == true)
+        {
+            fLight.SetActive(false);
+            isLightOn = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.JoystickButton2) && isLightOn == false)
         {
             fLight.SetActive(true);
             isLightOn = true;
@@ -241,6 +265,14 @@ public class PlayerController : MonoBehaviour
         // it needs to bounce off on non ground objects
         // despawn after 3 seconds
         // reference monster AI to update waypoint system.
+        if (Input.GetKeyDown(KeyCode.JoystickButton5) && canThrow == true)
+        {
+            // Instantiate a prefab object
+            var throwableinstance = Instantiate(throwablePrefab, throwSpawnPoint.position, throwSpawnPoint.rotation);
+            throwableinstance.AddForce(throwSpawnPoint.forward * Tforce);
+            canThrow = false;
+            StartCoroutine(CoolDownTimer());
+        }
     }
 
     public IEnumerator CoolDownTimer()
