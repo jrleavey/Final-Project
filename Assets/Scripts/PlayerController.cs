@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
             isWalking = false;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) || (Input.GetKey(KeyCode.JoystickButton8)) && currentStamina > 0)
+        if (Input.GetKey(KeyCode.LeftShift) || (Input.GetKey(KeyCode.JoystickButton1)) && currentStamina > 0)
         {
             speed = speedSprint;
             currentStamina-= Time.deltaTime;
