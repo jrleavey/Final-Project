@@ -133,10 +133,13 @@ public class PlayerController : MonoBehaviour
             velocity.y = -2f;
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
-        }
+        //if (Input.GetButtonDown("Jump") && isGrounded)
+        //{
+           // velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        //}
+                // Took out jump code
+
+
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
         float horizontal = Input.GetAxisRaw("Horizontal");
