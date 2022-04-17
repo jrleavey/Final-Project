@@ -13,6 +13,8 @@ TagManager:
   - 'Teddy '
   - Blanket
   - Win
+  - Closet
+  - Window
   layers:
   - Default
   - TransparentFX

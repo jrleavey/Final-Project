@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame ()
     {
         transitionAnim.Play("fadeMenuEnd");
-        SceneManager.LoadScene("Lvl 1");
+        SceneManager.LoadScene("Hub");
     }
 
     public void QuitGame ()
@@ -43,6 +43,13 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Win");
     }
+
+    public void RestartLevel()
+    {
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
+    }
+        
 
     public void Update()
     {

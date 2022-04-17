@@ -80,11 +80,6 @@ public class AISeeing : MonoBehaviour
             radius = 20;
             angle = 90;
         }
-
-        if (playerref.GetComponent<PlayerController>().isGameOver == true)
-        {
-            Destroy(this.gameObject);
-        }
     }
     private void OnTriggerEnter(Collider other)
     {

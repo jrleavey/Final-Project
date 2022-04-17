@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Throwable : MonoBehaviour
 {
@@ -41,9 +42,9 @@ public class Throwable : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            Debug.Log("Hit the Ground");
             monster.GetComponent<AISeeing>().distractionCollisionPoint = collisionPosition;
             monster.GetComponent<AISeeing>().isDistractionCollided = true;
-            Debug.Log("Hit the Ground");
             AudioSource.PlayClipAtPoint(collisionSound, transform.position);
         }
     }

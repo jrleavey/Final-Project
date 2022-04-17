@@ -41,13 +41,11 @@ public class PlayerController : MonoBehaviour
     public GameObject playerCamera;
     public GameObject monsterCamera;
     public bool playerCamOn = true;
-    public GameObject monsterFilter;
 
     public Rigidbody throwablePrefab;
     public Transform throwSpawnPoint;
     public float Tforce = 800;
     public bool canThrow = true;
-    public bool isGameOver = false;
     public GameObject brMusic;
     public GameObject winBook;
     public bool isWalking = false;
@@ -179,10 +177,9 @@ public class PlayerController : MonoBehaviour
     }
     public void CaughtByMonster()
     {
-        loseScreen.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        isGameOver = true;
+        loseScreen.SetActive(true);
         AudioSource.PlayClipAtPoint(loseSound, transform.position);
 
     }
@@ -191,7 +188,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.tag == "Win")
         {
-            isGameOver = true;
+
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             winScreen.SetActive(true);
@@ -207,28 +204,24 @@ public class PlayerController : MonoBehaviour
             playerCamera.SetActive(false);
             monsterCamera.SetActive(true);
             playerCamOn = false;
-            monsterFilter.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.G) && playerCamOn == false)
         {
             monsterCamera.SetActive(false);
             playerCamera.SetActive(true);
             playerCamOn = true;
-            monsterFilter.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == true)
         {
             playerCamera.SetActive(false);
             monsterCamera.SetActive(true);
             playerCamOn = false;
-            monsterFilter.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == false)
         {
             monsterCamera.SetActive(false);
             playerCamera.SetActive(true);
             playerCamOn = true;
-            monsterFilter.SetActive(false);
         }
     }
     public void FlashLight()
