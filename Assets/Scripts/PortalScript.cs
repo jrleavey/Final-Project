@@ -49,4 +49,22 @@ public class PortalScript : MonoBehaviour
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player" && this.gameObject.tag == "Closet")
+        {
+            closetText.SetActive(false);
+        }
+
+        if (other.tag == "Player" && this.gameObject.tag == "Bed")
+        {
+            bedText.SetActive(false);
+
+        }
+        if (other.tag == "Player" && this.gameObject.tag == "Window")
+        {
+            windowText.SetActive(false);
+        }
+    }
 }
+

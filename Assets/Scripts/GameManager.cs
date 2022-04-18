@@ -7,6 +7,11 @@ public class GameManager : MonoBehaviour
     public  bool hasBear = false;
     public  bool hasBook = false;
     public  bool hasBlanket = false;
+
+    public GameObject BlanketLight;
+    public GameObject BearLight;
+    public GameObject BookLight;
+
     public GameObject winMenu;
 
     void Awake()
@@ -26,7 +31,24 @@ public class GameManager : MonoBehaviour
         {
             winGame();
         }
-            
+
+        if (hasBear == true)
+        {
+            BearLight.SetActive(true);
+        }
+
+        if (hasBlanket == true)
+        {
+            BlanketLight.SetActive(true);
+
+        }
+
+        if (hasBook == true)
+        {
+            BookLight.SetActive(true);
+
+        }
+
     }
     
     void winGame()
