@@ -3,7 +3,11 @@ guid: 69102dc429f08d84ab7587a1c553b45f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - BlanketLight: {instanceID: 0}
+  - BearLight: {instanceID: 0}
+  - BookLight: {fileID: 919132149155446097, guid: 5cc0da04a8ddda64695e178b990348e1, type: 3}
+  - winMenu: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
