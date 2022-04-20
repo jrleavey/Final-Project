@@ -42,6 +42,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Throwable.cs" />
      <Compile Include="Assets\Scripts\AISeeing.cs" />
+     <Compile Include="Assets\Scripts\FlyThruCam.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Flashlight.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
