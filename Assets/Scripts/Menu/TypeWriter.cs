@@ -6,7 +6,7 @@ using UnityEngine;
 public class TypeWriter : MonoBehaviour
 {
 
-    [SerializeField]private float typeWriterSpeed = 50f;
+    [SerializeField]private float typeWriterSpeed = 10f;
 
     public Coroutine Run(string textToType, TMP_Text textLabel)
     {

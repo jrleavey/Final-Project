@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: eca5b67f34878f9438991be73e0ddf37
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Acki Preschool
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8ecfd53b22d20c9458dc2896d037b573, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
