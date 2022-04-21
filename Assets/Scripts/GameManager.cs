@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject winMenu;
 
+    public bool hasAll = false;
+
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     {
         if (hasBook == true && hasBlanket == true && hasBear == true)
         {
+            hasAll = true;
             winGame();
         }
 
