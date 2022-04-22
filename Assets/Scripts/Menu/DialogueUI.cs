@@ -32,7 +32,7 @@ public class DialogueUI : MonoBehaviour
        foreach (string dialogue in dialogueObject.Dialogue)
        {
             yield return typeWriterEffect.Run(dialogue, textLabel);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) | Input.GetKeyDown(KeyCode.JoystickButton4));
        }
 
        CloseDialogueBox();

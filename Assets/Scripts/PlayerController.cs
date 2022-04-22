@@ -57,6 +57,11 @@ public class PlayerController : MonoBehaviour
     public float maxBattery= 15;
     public float currentBattery;
 
+    public bool godMode = true;
+    
+    
+    
+
 
     void Start()
     {
@@ -121,6 +126,8 @@ public class PlayerController : MonoBehaviour
         {
             currentBattery += Time.deltaTime;
         }
+      
+        
     }
     private void Movement()
     {
@@ -177,12 +184,23 @@ public class PlayerController : MonoBehaviour
     }
     public void CaughtByMonster()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        loseScreen.SetActive(true);
-        AudioSource.PlayClipAtPoint(loseSound, transform.position);
+        if (godMode == false)
+        {
+            
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            loseScreen.SetActive(true);
+            AudioSource.PlayClipAtPoint(loseSound, transform.position);
+        }
+        if (godMode == true)
+        {
+            speed = 10;
+        }
+       
 
     }
+
+    
     public void OnTriggerEnter(Collider other)
     {
 
