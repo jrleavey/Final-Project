@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     public float maxBattery= 15;
     public float currentBattery;
 
-    public bool godMode = false;
+    static public bool godMode = false;
     public GameObject GodModeText;
 
    
