@@ -15,6 +15,7 @@ TagManager:
   - Win
   - Closet
   - Window
+  - Tutorial
   layers:
   - Default
   - TransparentFX
