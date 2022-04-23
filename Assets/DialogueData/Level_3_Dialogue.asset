@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Level_3_Dialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - Omg is this E.T. ?
-  - 'Imma go inside now '
+  - It's almost midnight, I need to get home... but there's something in my backyard.
+    I'm scared.
+  - I can't see where it is but I know it's there. I need find a way to know where
+    it's going.
