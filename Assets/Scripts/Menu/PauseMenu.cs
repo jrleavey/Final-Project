@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
 
    public void ActivateMenu()
     {
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         AudioListener.pause = true;

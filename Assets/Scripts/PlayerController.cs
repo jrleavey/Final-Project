@@ -57,9 +57,10 @@ public class PlayerController : MonoBehaviour
     public float maxBattery= 15;
     public float currentBattery;
 
-    public bool godMode = true;
-    
-    
+    public bool godMode = false;
+    public GameObject GodModeText;
+
+   
     
 
 
@@ -77,6 +78,7 @@ public class PlayerController : MonoBehaviour
         CameraSwap();
         FlashLight();
         ThrowDistraction();
+        
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -182,23 +184,46 @@ public class PlayerController : MonoBehaviour
         
 
     }
+
+    // Below is where I added GodMode code
     public void CaughtByMonster()
     {
-        if (godMode == false)
+        if (godMode == true)
+        {
+            SetGODMODE(true);
+            
+            
+        }
+        
+        else if (godMode == false)
         {
             
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             loseScreen.SetActive(true);
             AudioSource.PlayClipAtPoint(loseSound, transform.position);
+            
         }
-        if (godMode == true)
-        {
-            speed = 10;
-        }
-       
+        
+
+
 
     }
+    public void SetGODMODE(bool isGodModeon)
+    {
+        godMode = isGodModeon;
+        if (godMode == true)
+        {
+            GodModeText.SetActive(true);
+        }
+        
+        if (godMode == false)
+        {
+            GodModeText.SetActive(false);
+        }
+
+    }
+   
 
     
     public void OnTriggerEnter(Collider other)
