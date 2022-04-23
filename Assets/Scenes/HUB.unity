@@ -11693,6 +11693,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 523186548c4256c4295982b0145dfba3, type: 3}
+--- !u!1 &1358948339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635688578321339647, guid: 846dd7df69a4fed47b02b3cfc2646c7b, type: 3}
+  m_PrefabInstance: {fileID: 1969893460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1358948343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358948339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0033533217, y: 0.050034586, z: 0.0026978455}
+  m_Center: {x: 6.4718747e-10, y: 0.000000007910735, z: 0.00007141319}
 --- !u!1 &1385530995
 GameObject:
   m_ObjectHideFlags: 0
@@ -16721,6 +16739,7 @@ MonoBehaviour:
   currentStamina: 0
   maxBattery: 15
   currentBattery: 0
+  godMode: 1
 --- !u!95 &2036208278
 Animator:
   serializedVersion: 3
