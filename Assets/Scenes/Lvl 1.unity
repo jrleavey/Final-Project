@@ -13136,7 +13136,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133542745}
-  m_LocalRotation: {x: -0.1404177, y: 0.824433, z: -0.2333345, w: -0.49613324}
+  m_LocalRotation: {x: -0.14041768, y: 0.824433, z: -0.2333345, w: -0.49613324}
   m_LocalPosition: {x: 535.0518, y: 273.977, z: -111.238625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -66487,7 +66487,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132164081}
-  m_LocalRotation: {x: -0.1494189, y: 0.8200523, z: -0.2482919, w: -0.493497}
+  m_LocalRotation: {x: -0.14941889, y: 0.8200524, z: -0.24829191, w: -0.493497}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -92676,7 +92676,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545786742}
-  m_LocalRotation: {x: -0.13139403, y: 0.8285304, z: -0.21833968, w: -0.49859896}
+  m_LocalRotation: {x: -0.13139401, y: 0.8285303, z: -0.21833967, w: -0.49859896}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -100044,7 +100044,6 @@ MonoBehaviour:
   currentStamina: 0
   maxBattery: 15
   currentBattery: 0
-  godMode: 0
   GodModeText: {fileID: 439837890}
 --- !u!143 &1760967962
 CharacterController:

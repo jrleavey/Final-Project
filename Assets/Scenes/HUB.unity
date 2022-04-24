@@ -2220,6 +2220,7 @@ GameObject:
   - component: {fileID: 164582064}
   - component: {fileID: 164582063}
   - component: {fileID: 164582062}
+  - component: {fileID: 164582067}
   - component: {fileID: 164582061}
   - component: {fileID: 164582065}
   - component: {fileID: 164582066}
@@ -2366,6 +2367,19 @@ MonoBehaviour:
   textLabel: {fileID: 2005001226}
   testDialogue: {fileID: 11400000, guid: 0ff7c3fd369c26f46bff8d2004439233, type: 2}
   dialogueBox: {fileID: 948267863}
+--- !u!114 &164582067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164582059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90aa4666cfdf8a4493ab6e037378740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 2433921648a9b2040ad66c7c5d255789, type: 2}
 --- !u!1 &168708552
 GameObject:
   m_ObjectHideFlags: 0
@@ -20118,7 +20132,6 @@ MonoBehaviour:
   currentStamina: 0
   maxBattery: 15
   currentBattery: 0
-  godMode: 0
   GodModeText: {fileID: 1346075567}
 --- !u!95 &2036208278
 Animator:
