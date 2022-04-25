@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-   public void ActivateMenu()
+    public void ActivateMenu()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

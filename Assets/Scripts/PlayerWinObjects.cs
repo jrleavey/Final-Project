@@ -26,7 +26,6 @@ public class PlayerWinObjects : MonoBehaviour
         {
             collectedTeddy = true;
             GameManager.GetComponent<GameManager>().hasBear = true;
-
             SceneManager.LoadScene("HUB");
         }
         if (other.tag == "Player" && this.tag == "StoryBook")

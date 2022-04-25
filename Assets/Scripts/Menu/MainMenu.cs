@@ -10,24 +10,24 @@ public class MainMenu : MonoBehaviour
     public Button playButton;
 
     public float transitionTime = 1.5f;
-    
-    
+
+
     void Start()
     {
-        transitionAnim = GetComponent<Animator> ();  
+        transitionAnim = GetComponent<Animator>();
         //playButton.onClick.AddListener(TaskOnClick);
     }
-    
-    public void PlayGame ()
+
+    public void PlayGame()
     {
         transitionAnim.Play("fadeMenuEnd");
         SceneManager.LoadScene("Hub");
     }
 
-    public void QuitGame ()
+    public void QuitGame()
     {
         Application.Quit();
-        
+
         Debug.Log("Quit!");
     }
 
@@ -48,10 +48,10 @@ public class MainMenu : MonoBehaviour
 
     public void RestartLevel()
     {
-        Scene scene = SceneManager.GetActiveScene(); 
+        Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
-        
+
 
     public void Update()
     {
@@ -62,15 +62,15 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    
-    
+
+
 
     public void TaskOnClick()
     {
-        
-        if(playButton != null)
+
+        if (playButton != null)
         {
-            transitionAnim.Play ("fadeMenuEnd");
+            transitionAnim.Play("fadeMenuEnd");
             LoadNextLevel();
         }
 

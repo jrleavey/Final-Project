@@ -54,14 +54,14 @@ public class PlayerController : MonoBehaviour
     public float maxStamina = 5;
     public float currentStamina;
 
-    public float maxBattery= 15;
+    public float maxBattery = 15;
     public float currentBattery;
 
     static public bool godMode = false;
     public GameObject GodModeText;
 
-   
-    
+
+
 
 
     void Start()
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         CameraSwap();
         FlashLight();
         ThrowDistraction();
-        
+
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
             currentStamina = 0;
         }
 
-        if (currentStamina>= 5)
+        if (currentStamina >= 5)
         {
             currentStamina = 5;
         }
@@ -128,8 +128,8 @@ public class PlayerController : MonoBehaviour
         {
             currentBattery += Time.deltaTime;
         }
-      
-        
+
+
     }
     private void Movement()
     {
@@ -142,9 +142,9 @@ public class PlayerController : MonoBehaviour
 
         //if (Input.GetButtonDown("Jump") && isGrounded)
         //{
-           // velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        // velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         //}
-                // Took out jump code
+        // Took out jump code
 
 
         velocity.y += gravity * Time.deltaTime;
@@ -170,18 +170,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) || (Input.GetKey(KeyCode.JoystickButton1)) && currentStamina > 0)
         {
             speed = speedSprint;
-            currentStamina-= Time.deltaTime;
+            currentStamina -= Time.deltaTime;
             //isSprinting = true;    code I tried to use for sprintbar
         }
         else
         {
             speed = 4;
-            currentStamina+= Time.deltaTime;
-            
+            currentStamina += Time.deltaTime;
+
             //isSprinting = false;  code I tried to use for sprintbar
         }
-        
-        
+
+
 
     }
 
@@ -191,20 +191,20 @@ public class PlayerController : MonoBehaviour
         if (godMode == true)
         {
             SetGODMODE(true);
-            
-            
+
+
         }
-        
+
         else if (godMode == false)
         {
-            
+
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             loseScreen.SetActive(true);
             AudioSource.PlayClipAtPoint(loseSound, transform.position);
-            
+
         }
-        
+
 
 
 
@@ -216,16 +216,16 @@ public class PlayerController : MonoBehaviour
         {
             GodModeText.SetActive(true);
         }
-        
+
         if (godMode == false)
         {
             GodModeText.SetActive(false);
         }
 
     }
-   
 
-    
+
+
     public void OnTriggerEnter(Collider other)
     {
 
@@ -274,7 +274,7 @@ public class PlayerController : MonoBehaviour
             fLight.SetActive(false);
             isLightOn = false;
         }
-       else if (Input.GetKeyDown(KeyCode.F) && isLightOn == false)
+        else if (Input.GetKeyDown(KeyCode.F) && isLightOn == false)
         {
             fLight.SetActive(true);
             isLightOn = true;
