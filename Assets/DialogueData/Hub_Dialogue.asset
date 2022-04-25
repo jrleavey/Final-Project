@@ -13,18 +13,15 @@ MonoBehaviour:
   m_Name: Hub_Dialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - "Riley has woken up in the middle of the night with a weird feeling. Upon noticing
+  - 'Riley has woken up in the middle of the night with a weird feeling. Upon noticing
     that some of their favorite toys are gone, they frantically search all throughout
-    their bedroom only to find zero traces of them! Instead of finding their toys,
-    the child finds portals in the darkest parts of their room. Not knowing they
-    were stepping into a nightmare, the child goes in them hoping to gather clues
-    of where their toys might be\u2026\r\n"
+    their bedroom only to find zero traces of them! '
+  - "Instead of finding their toys, the child finds portals in the darkest parts
+    of their room. Not knowing they were stepping into a nightmare, the child goes
+    in, equipped with a ball and flashlight, hoping to gather clues of where their
+    toys might be\u2026\r\n"
   - 'The portals are:  underneath their creaky bed, buried deep in their closet,
     and behind the curtain of the window. Complete all three levels to defeat the
-    nightmare!
-
-
-    Tip: Press P to Pause and revisit the Settings and Guide menus.
-    The Guide menu can also be accessed through the blackboard.
-
-'
+    nightmare!'
+  - 'Tip: Press P to Pause and revisit the Settings and Guide menus. The Guide menu
+    can also be accessed through the blackboard.'

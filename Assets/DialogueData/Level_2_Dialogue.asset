@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level_2_Dialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - What happened here? Everything inside this closet is so crowded and acting so
-    strange...!
-  - I feel something watching me. I should hide. Using my flashlight too much might
-    reveal where I am...
+  - '"What happened here? Everything inside this closet is so crowded and acting
+    so strange...!"'
+  - '"I feel something watching me. I should hide. Using my flashlight too much might
+    reveal where I am..."'
