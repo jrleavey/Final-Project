@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4ABD25F2-7453-1E14-1C63-BCE00338D1E5}</ProjectGuid>
+    <ProjectGuid>{CCEECD95-B9AF-DADE-A1FC-80F0A0B7D8D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,20 +55,25 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\LoadZone.cs" />
     <Compile Include="Assets\Scripts\Menu\Tutorial.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerArtDemo.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Throwable.cs" />
     <Compile Include="Assets\Scripts\AISeeing.cs" />
     <Compile Include="Assets\Scripts\Menu\DialogueObject.cs" />
     <Compile Include="Assets\Scripts\FlyThruCam.cs" />
+    <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
+    <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PortalScript.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\MenuButtonFunctions.cs" />
     <Compile Include="Assets\WinMenuTrigger.cs" />
+    <Compile Include="Assets\Scripts\Menu\AudioTest.cs" />
     <Compile Include="Assets\Scripts\Stamina.cs" />
     <Compile Include="Assets\Scripts\Menu\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\Menu\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\PlayerWinObjects.cs" />
     <Compile Include="Assets\Scripts\Menu\TypeWriter.cs" />
   </ItemGroup>

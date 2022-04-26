@@ -16,6 +16,7 @@ TagManager:
   - Closet
   - Window
   - Tutorial
+  - Bear
   layers:
   - Default
   - TransparentFX

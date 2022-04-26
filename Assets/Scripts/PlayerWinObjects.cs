@@ -22,7 +22,7 @@ public class PlayerWinObjects : MonoBehaviour
             GameManager.GetComponent<GameManager>().hasBlanket = true;
             SceneManager.LoadScene("HUB");
         }
-        if (other.tag == "Player" && this.tag == "Teddy")
+        if (other.tag == "Player" && this.tag == "Bear")
         {
             collectedTeddy = true;
             GameManager.GetComponent<GameManager>().hasBear = true;
