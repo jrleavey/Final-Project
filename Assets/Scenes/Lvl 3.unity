@@ -11340,6 +11340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86542d5f26a58614d945366e7b464471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  isPaused: 0
 --- !u!1 &226318790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd2d5d9e6c48c7649b81a49b72ed9443, type: 3}
@@ -17014,6 +17016,7 @@ GameObject:
   - component: {fileID: 407058310}
   - component: {fileID: 407058309}
   - component: {fileID: 407058313}
+  - component: {fileID: 407058314}
   - component: {fileID: 407058312}
   - component: {fileID: 407058308}
   - component: {fileID: 407058307}
@@ -17036,6 +17039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb05a7267892de41a140ac8cf6b9603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 0}
+  playButton: {fileID: 0}
+  transitionTime: 1.5
 --- !u!114 &407058308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17153,6 +17159,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641a33cb8c9357b4b90a49dc21681cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLabel: {fileID: 0}
+  testDialogue: {fileID: 0}
+  dialogueBox: {fileID: 0}
+--- !u!114 &407058314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407058306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86542d5f26a58614d945366e7b464471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 2105759919}
+  isPaused: 0
 --- !u!4 &408102215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: def56bccc15562143a683a270a34f612, type: 3}
@@ -30905,7 +30928,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899259656}
-  m_LocalRotation: {x: 0.030323574, y: 0.95622104, z: -0.27063364, w: 0.1071413}
+  m_LocalRotation: {x: 0.030323576, y: 0.95622104, z: -0.2706336, w: 0.10714129}
   m_LocalPosition: {x: -19.173944, y: 3.3389907, z: 15.845608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -53525,7 +53548,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582051744}
-  m_LocalRotation: {x: 0.030323576, y: 0.95622104, z: -0.27063364, w: 0.107141316}
+  m_LocalRotation: {x: 0.030323576, y: 0.95622104, z: -0.2706336, w: 0.1071413}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -68465,6 +68488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86542d5f26a58614d945366e7b464471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  isPaused: 0
 --- !u!1 &2070766375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd2d5d9e6c48c7649b81a49b72ed9443, type: 3}
@@ -69737,7 +69762,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128954073}
-  m_LocalRotation: {x: 0.028374886, y: 0.9609734, z: -0.25324184, w: 0.10767382}
+  m_LocalRotation: {x: 0.028374882, y: 0.9609734, z: -0.25324184, w: 0.1076738}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
