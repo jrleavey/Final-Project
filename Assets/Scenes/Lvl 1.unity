@@ -93700,7 +93700,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545786742}
-  m_LocalRotation: {x: -0.13139404, y: 0.8285303, z: -0.21833962, w: -0.49859902}
+  m_LocalRotation: {x: -0.13139403, y: 0.8285304, z: -0.21833968, w: -0.49859896}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -99817,6 +99817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1726174062}
   - component: {fileID: 1726174063}
+  - component: {fileID: 1726174064}
   m_Layer: 5
   m_Name: brightnessSlider
   m_TagString: Untagged
@@ -99890,13 +99891,27 @@ MonoBehaviour:
   m_FillRect: {fileID: 1931990963}
   m_HandleRect: {fileID: 650766872}
   m_Direction: 0
-  m_MinValue: 0.0001
-  m_MaxValue: 1
+  m_MinValue: 0
+  m_MaxValue: 2
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1726174064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726174061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005481feaf726c7489e43ef4c0e60673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GammaSlider: {fileID: 1726174063}
+  sceneLight: {fileID: 711858576}
 --- !u!1001 &1726832082
 PrefabInstance:
   m_ObjectHideFlags: 0
