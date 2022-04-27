@@ -6590,7 +6590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: -0.9999695}
+  m_AnchoredPosition: {x: -1, y: -1}
   m_SizeDelta: {x: 828, y: 453.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69086800
@@ -12700,7 +12700,7 @@ Transform:
   - {fileID: 1784633158}
   - {fileID: 1545786744}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &113845627 stripped
 GameObject:
@@ -20390,6 +20390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86542d5f26a58614d945366e7b464471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  isPaused: 0
 --- !u!4 &201034690
 Transform:
   m_ObjectHideFlags: 0
@@ -47301,7 +47303,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &763654688 stripped
 Transform:
@@ -48389,6 +48391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86542d5f26a58614d945366e7b464471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1580983144}
+  isPaused: 0
 --- !u!4 &809022680
 Transform:
   m_ObjectHideFlags: 0
@@ -80830,7 +80834,7 @@ Transform:
   - {fileID: 1885297387}
   - {fileID: 773669375}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1247812685
 PrefabInstance:
@@ -92012,7 +92016,7 @@ Transform:
   - {fileID: 2061494019}
   - {fileID: 532579956}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1500638651
 PrefabInstance:
@@ -94966,7 +94970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: -0.9999695}
+  m_AnchoredPosition: {x: -1, y: -1}
   m_SizeDelta: {x: 828, y: 453.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580983146
@@ -95683,7 +95687,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602702125 stripped
 GameObject:
@@ -97523,6 +97527,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de92e3a15f806964a9b56d144b22bf65, type: 3}
+--- !u!1 &1673923785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673923787}
+  - component: {fileID: 1673923786}
+  m_Layer: 0
+  m_Name: MusicPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1673923786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673923785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12fdcbbe32ff58c43877b9c9d984c153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSource: {fileID: 762390063}
+  volumeSlider: {fileID: 2027989168}
+--- !u!4 &1673923787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673923785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1674621469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107735,16 +107784,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 911554940}
   m_HandleRect: {fileID: 563531692}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetVolume
+      - m_Target: {fileID: 1673923786}
+        m_TargetAssemblyTypeName: AudioTesting, Assembly-CSharp
+        m_MethodName: updateVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -115432,7 +115481,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 00ccbdcb77f31d14ba7df287ce59b4ff, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00ccbdcb77f31d14ba7df287ce59b4ff, type: 3}
       propertyPath: m_LocalScale.x
