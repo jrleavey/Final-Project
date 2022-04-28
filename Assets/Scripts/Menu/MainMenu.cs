@@ -27,7 +27,8 @@ public class MainMenu : MonoBehaviour
         transitionAnim = GetComponent<Animator>();
         checkGM();
         //playButton.onClick.AddListener(TaskOnClick);
-                transitionAnim.Play("fadeMenuEnd");
+        transitionAnim.Play("fadeMenuEnd");
+
     }
 
     public void PlayGame()
