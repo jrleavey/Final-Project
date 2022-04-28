@@ -125,4 +125,9 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    public void BackToHub()
+    {
+        SceneManager.LoadScene("HUB");
+    }
+
 }

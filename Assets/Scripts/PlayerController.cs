@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         playerCamera.SetActive(true);
         monsterCamera.SetActive(false);
@@ -200,6 +201,7 @@ public class PlayerController : MonoBehaviour
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
             loseScreen.SetActive(true);
             AudioSource.PlayClipAtPoint(loseSound, transform.position);
 

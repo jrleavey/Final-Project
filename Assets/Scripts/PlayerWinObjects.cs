@@ -8,32 +8,50 @@ public class PlayerWinObjects : MonoBehaviour
     public bool collectedBlanket = false;
     public bool collectedTeddy = false;
     public bool collectedStoryBook = false;
-    public GameObject GameManager;
 
-    public void Awake()
-    {
-        GameManager = GameObject.Find("GameManager");
-    }
+    public GameObject lvl1Win;
+    public GameObject lvl2Win;
+    public GameObject lvl3Win;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && this.tag == "Blanket")
         {
             collectedBlanket = true;
-            GameManager.GetComponent<GameManager>().hasBlanket = true;
-            SceneManager.LoadScene("HUB");
+            if (lvl2Win != null)
+            {
+                lvl2Win.SetActive(true);
+            }
+            GameManager.Instance.hasBlanket = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+
+
         }
         if (other.tag == "Player" && this.tag == "Bear")
         {
             collectedTeddy = true;
-            GameManager.GetComponent<GameManager>().hasBear = true;
-            SceneManager.LoadScene("HUB");
+            if (lvl3Win != null)
+            {
+                lvl3Win.SetActive(true);
+            }
+            GameManager.Instance.hasBear = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
         if (other.tag == "Player" && this.tag == "StoryBook")
         {
             collectedStoryBook = true;
-            GameManager.GetComponent<GameManager>().hasBook = true;
-
-            SceneManager.LoadScene("HUB");
+            if (lvl1Win != null)
+            {
+                lvl1Win.SetActive(true);
+            }
+            GameManager.Instance.hasBook = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
     }
 }

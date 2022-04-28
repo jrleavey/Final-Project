@@ -9,21 +9,27 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private bool isPaused;
 
+    public GameObject LoseScreen;
+    public GameObject WinScreen;
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) | (Input.GetKeyDown(KeyCode.JoystickButton7)))
+        if (LoseScreen.activeInHierarchy == false && WinScreen.activeInHierarchy == false)
         {
-            isPaused = !isPaused;
-        }
+            if (Input.GetKeyDown(KeyCode.P) | (Input.GetKeyDown(KeyCode.JoystickButton7)))
+            {
+                isPaused = !isPaused;
+            }
 
-        if (isPaused)
-        {
-            ActivateMenu();
-        }
+            if (isPaused)
+            {
+                ActivateMenu();
+            }
 
-        else
-        {
-            DeactivateMenu();
+            else
+            {
+                DeactivateMenu();
+            }
         }
     }
 

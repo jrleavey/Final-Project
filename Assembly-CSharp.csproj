@@ -70,7 +70,6 @@
     <Compile Include="Assets\Scripts\PortalScript.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\MenuButtonFunctions.cs" />
-    <Compile Include="Assets\WinMenuTrigger.cs" />
     <Compile Include="Assets\Scripts\Stamina.cs" />
     <Compile Include="Assets\Scripts\Menu\Brightness.cs" />
     <Compile Include="Assets\Scripts\Menu\DialogueUI.cs" />

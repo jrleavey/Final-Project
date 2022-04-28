@@ -6952,7 +6952,9 @@ MonoBehaviour:
   collectedBlanket: 0
   collectedTeddy: 0
   collectedStoryBook: 0
-  GameManager: {fileID: 0}
+  lvl1Win: {fileID: 1319117521}
+  lvl2Win: {fileID: 0}
+  lvl3Win: {fileID: 0}
 --- !u!1 &83887233
 GameObject:
   m_ObjectHideFlags: 0
@@ -20495,51 +20497,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de92e3a15f806964a9b56d144b22bf65, type: 3}
   m_PrefabInstance: {fileID: 37753097}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &201034688
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 201034690}
-  - component: {fileID: 201034689}
-  m_Layer: 0
-  m_Name: PauseController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &201034689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201034688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86542d5f26a58614d945366e7b464471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  isPaused: 0
---- !u!4 &201034690
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201034688}
-  m_LocalRotation: {x: -0, y: 0.85681677, z: -0, w: 0.51562107}
-  m_LocalPosition: {x: 21.320326, y: -18.106602, z: 24.19281}
-  m_LocalScale: {x: 0.06666667, y: 0.06666667, z: 0.06666667}
-  m_Children: []
-  m_Father: {fileID: 1760967959}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &201054448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20999,7 +20956,7 @@ Transform:
   m_Children:
   - {fileID: 1142178452}
   m_Father: {fileID: 1760967959}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0.174, y: 90, z: 90}
 --- !u!136 &220308144
 CapsuleCollider:
@@ -48657,6 +48614,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1580983144}
   isPaused: 0
+  LoseScreen: {fileID: 1264402362}
+  WinScreen: {fileID: 1319117521}
 --- !u!4 &809022680
 Transform:
   m_ObjectHideFlags: 0
@@ -67195,7 +67154,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132164081}
-  m_LocalRotation: {x: -0.1494189, y: 0.8200523, z: -0.2482919, w: -0.493497}
+  m_LocalRotation: {x: -0.14941889, y: 0.8200524, z: -0.24829191, w: -0.493497}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -91751,21 +91710,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1319117521}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1555937793}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: BackToHub
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -93931,7 +93878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1552928458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -94221,6 +94168,13 @@ MonoBehaviour:
   transitionAnim: {fileID: 0}
   playButton: {fileID: 0}
   transitionTime: 1.5
+  BedPortal: {fileID: 0}
+  ClosetPortal: {fileID: 0}
+  WindowPortal: {fileID: 0}
+  BedLight: {fileID: 0}
+  ClosetLight: {fileID: 0}
+  WindowLight: {fileID: 0}
+  WinMenu: {fileID: 0}
 --- !u!114 &1555937794
 MonoBehaviour:
   m_ObjectHideFlags: 0
