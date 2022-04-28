@@ -67,6 +67,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+        if (GameManager.Instance.isGodModeOn == true)
+        {
+            godMode = true;
+            GodModeText.SetActive(true);
+        }
         Cursor.lockState = CursorLockMode.Locked;
         playerCamera.SetActive(true);
         monsterCamera.SetActive(false);
@@ -225,12 +230,6 @@ public class PlayerController : MonoBehaviour
         {
             GodModeText.SetActive(false);
         }
-
-        if (GameManager.Instance.isGodModeOn == true)
-        {
-            godMode = true;
-        }
-
     }
 
 
