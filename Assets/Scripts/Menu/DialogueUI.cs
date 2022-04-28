@@ -15,7 +15,11 @@ public class DialogueUI : MonoBehaviour
     {
         typeWriterEffect = GetComponent<TypeWriter>();
         CloseDialogueBox();
-        ShowDialogue(testDialogue);
+        if (GameManager.Instance.firsttime == true)
+        {
+            ShowDialogue(testDialogue);
+
+        }
     }
 
 

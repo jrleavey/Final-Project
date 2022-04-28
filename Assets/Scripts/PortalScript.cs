@@ -8,6 +8,8 @@ public class PortalScript : MonoBehaviour
     public GameObject closetText;
     public GameObject bedText;
     public GameObject windowText;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class PortalScript : MonoBehaviour
             closetText.SetActive(true);
             if (Input.GetKey(KeyCode.G) | Input.GetKeyDown(KeyCode.JoystickButton0))
             {
+                GameManager.Instance.firsttime = false;
                 SceneManager.LoadScene("Lvl 2");
             }
         }
@@ -37,6 +40,7 @@ public class PortalScript : MonoBehaviour
             bedText.SetActive(true);
             if (Input.GetKey(KeyCode.G) | Input.GetKeyDown(KeyCode.JoystickButton0))
             {
+                GameManager.Instance.firsttime = false;
                 SceneManager.LoadScene("Lvl 1");
             }
         }
@@ -45,6 +49,7 @@ public class PortalScript : MonoBehaviour
             windowText.SetActive(true);
             if (Input.GetKey(KeyCode.G) | Input.GetKeyDown(KeyCode.JoystickButton0))
             {
+                GameManager.Instance.firsttime = false;
                 SceneManager.LoadScene("Lvl 3");
             }
         }

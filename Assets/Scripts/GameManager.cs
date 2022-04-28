@@ -4,62 +4,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public  bool hasBear = false;
-    public  bool hasBook = false;
-    public  bool hasBlanket = false;
+    public bool hasBear = false;
+    public bool hasBook = false;
+    public bool hasBlanket = false;
+    public bool firsttime = true;
 
-    public GameObject BlanketLight;
-    public GameObject BearLight;
-    public GameObject BookLight;
+    private static GameManager instance;
+    public static GameManager Instance
+    {
+        get { return instance;  }
+    }
 
-    public GameObject winMenu;
 
-    public bool hasAll = false;
-
+    // Start is called before the first frame update
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (hasBook == true && hasBlanket == true && hasBear == true)
+        DontDestroyOnLoad(gameObject);
+        if (instance != null && instance != this)
         {
-            hasAll = true;
-            winGame();
-        }
-
-        if (hasBear == true)
+            Destroy(this.gameObject);
+        }          
+        else
         {
-            BearLight.SetActive(true);
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
-
-        if (hasBlanket == true)
-        {
-            BlanketLight.SetActive(true);
-
-        }
-
-        if (hasBook == true)
-        {
-            BookLight.SetActive(true);
-
-        }
-
     }
-    
-    void winGame()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Time.timeScale = 0;
-        AudioListener.pause = true;
-        winMenu.SetActive(true);
-    }
-        
 }

@@ -14,11 +14,4 @@ public class WinMenuTrigger : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(GameManager.GetComponent<GameManager>().hasAll == true)
-        {
-            winMenu.SetActive(true);
-        }
-    }
 }

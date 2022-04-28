@@ -11,10 +11,21 @@ public class MainMenu : MonoBehaviour
 
     public float transitionTime = 1.5f;
 
+    public GameObject BedPortal;
+    public GameObject ClosetPortal;
+    public GameObject WindowPortal;
+
+    public GameObject BedLight;
+    public GameObject ClosetLight;
+    public GameObject WindowLight;
+
+    public GameObject WinMenu;
+
 
     void Start()
     {
         transitionAnim = GetComponent<Animator>();
+        checkGM();
         //playButton.onClick.AddListener(TaskOnClick);
     }
 
@@ -88,6 +99,30 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene(levelIndex);
 
+    }
+
+    public void checkGM()
+    {
+        if (GameManager.Instance.hasBook == true)
+        {
+            BedPortal.SetActive(false);
+            BedLight.SetActive(true);
+        }
+        if (GameManager.Instance.hasBlanket == true)
+        {
+            ClosetPortal.SetActive(false);
+            ClosetLight.SetActive(true);
+        }
+        if (GameManager.Instance.hasBear == true)
+        {
+            WindowPortal.SetActive(false);
+            WindowLight.SetActive(true); 
+        }
+
+        if (GameManager.Instance.hasBook == true && GameManager.Instance.hasBear && GameManager.Instance.hasBlanket)
+        {
+            WinMenu.SetActive(true);
+        }
     }
 
 }

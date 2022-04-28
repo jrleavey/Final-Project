@@ -229,42 +229,35 @@ public class PlayerController : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag == "Win")
-        {
-
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            winScreen.SetActive(true);
-            brMusic.SetActive(false);
-            winBook.SetActive(false);
-            AudioSource.PlayClipAtPoint(winSound, transform.position);
-        }
     }
     public void CameraSwap()
     {
-        if (Input.GetKeyDown(KeyCode.G) && playerCamOn == true)
+        if (monsterCamera != null)
         {
-            playerCamera.SetActive(false);
-            monsterCamera.SetActive(true);
-            playerCamOn = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.G) && playerCamOn == false)
-        {
-            monsterCamera.SetActive(false);
-            playerCamera.SetActive(true);
-            playerCamOn = true;
-        }
-        if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == true)
-        {
-            playerCamera.SetActive(false);
-            monsterCamera.SetActive(true);
-            playerCamOn = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == false)
-        {
-            monsterCamera.SetActive(false);
-            playerCamera.SetActive(true);
-            playerCamOn = true;
+            if (Input.GetKeyDown(KeyCode.G) && playerCamOn == true)
+            {
+                playerCamera.SetActive(false);
+                monsterCamera.SetActive(true);
+                playerCamOn = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.G) && playerCamOn == false)
+            {
+                monsterCamera.SetActive(false);
+                playerCamera.SetActive(true);
+                playerCamOn = true;
+            }
+            if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == true)
+            {
+                playerCamera.SetActive(false);
+                monsterCamera.SetActive(true);
+                playerCamOn = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.JoystickButton0) && playerCamOn == false)
+            {
+                monsterCamera.SetActive(false);
+                playerCamera.SetActive(true);
+                playerCamOn = true;
+            }
         }
     }
     public void FlashLight()

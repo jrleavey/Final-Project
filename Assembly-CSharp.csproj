@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CCEECD95-B9AF-DADE-A1FC-80F0A0B7D8D4}</ProjectGuid>
+    <ProjectGuid>{4ABD25F2-7453-1E14-1C63-BCE00338D1E5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -73,7 +73,6 @@
     <Compile Include="Assets\WinMenuTrigger.cs" />
     <Compile Include="Assets\Scripts\Stamina.cs" />
     <Compile Include="Assets\Scripts\Menu\Brightness.cs" />
-    <Compile Include="Assets\Scripts\Menu\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\PlayerWinObjects.cs" />
     <Compile Include="Assets\Scripts\Menu\TypeWriter.cs" />
