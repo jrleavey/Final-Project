@@ -1309,7 +1309,7 @@ MonoBehaviour:
   collectedStoryBook: 0
   lvl1Win: {fileID: 0}
   lvl2Win: {fileID: 0}
-  lvl3Win: {fileID: 0}
+  lvl3Win: {fileID: 708044737}
 --- !u!65 &28316011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10133,7 +10133,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175391542}
-  m_LocalRotation: {x: 0.03226741, y: 0.95114017, z: -0.287982, w: 0.10657205}
+  m_LocalRotation: {x: 0.032267407, y: 0.95114017, z: -0.28798202, w: 0.10657202}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11614,8 +11614,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   isPaused: 0
-  LoseScreen: {fileID: 0}
-  WinScreen: {fileID: 0}
+  LoseScreen: {fileID: 1053206421}
+  WinScreen: {fileID: 708044737}
 --- !u!1 &226318790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd2d5d9e6c48c7649b81a49b72ed9443, type: 3}
@@ -17491,8 +17491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2105759919}
   isPaused: 0
-  LoseScreen: {fileID: 0}
-  WinScreen: {fileID: 0}
+  LoseScreen: {fileID: 1053206421}
+  WinScreen: {fileID: 708044737}
 --- !u!4 &408102215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: def56bccc15562143a683a270a34f612, type: 3}
@@ -40749,9 +40749,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 407058307}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: BackToHub
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -60936,8 +60936,8 @@ MonoBehaviour:
   turnSmoothTime: 0.1
   winSound: {fileID: 8300000, guid: b8041204c06dfc9468be5991e4f3321a, type: 3}
   loseSound: {fileID: 8300000, guid: 94c53ca30d728a14e8252f7b03880c48, type: 3}
-  winScreen: {fileID: 0}
-  loseScreen: {fileID: 0}
+  winScreen: {fileID: 708044737}
+  loseScreen: {fileID: 1053206421}
   isLightOn: 1
   fLight: {fileID: 1561139687}
   playerCamera: {fileID: 1669326158}
@@ -60969,7 +60969,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 12446ba241172a54096aded1bec88cdd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

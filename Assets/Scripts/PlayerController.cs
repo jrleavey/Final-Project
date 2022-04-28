@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     public float maxBattery = 15;
     public float currentBattery;
 
-    static public bool godMode = false;
+    public bool godMode = false;
     public GameObject GodModeText;
 
 
@@ -194,6 +194,7 @@ public class PlayerController : MonoBehaviour
             SetGODMODE(true);
 
 
+
         }
 
         else if (godMode == false)
@@ -214,6 +215,7 @@ public class PlayerController : MonoBehaviour
     public void SetGODMODE(bool isGodModeon)
     {
         godMode = isGodModeon;
+        GameManager.Instance.isGodModeOn = true;
         if (godMode == true)
         {
             GodModeText.SetActive(true);
@@ -222,6 +224,11 @@ public class PlayerController : MonoBehaviour
         if (godMode == false)
         {
             GodModeText.SetActive(false);
+        }
+
+        if (GameManager.Instance.isGodModeOn == true)
+        {
+            godMode = true;
         }
 
     }
@@ -291,6 +298,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && canThrow == true)
         {
             // Instantiate a prefab object
+            animator.Play("Throw");
             var throwableinstance = Instantiate(throwablePrefab, throwSpawnPoint.position, throwSpawnPoint.rotation);
             throwableinstance.AddForce(throwSpawnPoint.forward * Tforce);
             canThrow = false;
@@ -302,6 +310,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.JoystickButton5) && canThrow == true)
         {
             // Instantiate a prefab object
+            animator.Play("Throw");
             var throwableinstance = Instantiate(throwablePrefab, throwSpawnPoint.position, throwSpawnPoint.rotation);
             throwableinstance.AddForce(throwSpawnPoint.forward * Tforce);
             canThrow = false;
@@ -311,6 +320,7 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator CoolDownTimer()
     {
+        animator.SetBool("IsThrowing", false);
         yield return new WaitForSeconds(5f);
         canThrow = true;
     }

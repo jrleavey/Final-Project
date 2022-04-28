@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public bool hasBook = false;
     public bool hasBlanket = false;
     public bool firsttime = true;
+    public bool isGodModeOn = false;
 
     private static GameManager instance;
     public static GameManager Instance
