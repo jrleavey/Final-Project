@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
         transitionAnim = GetComponent<Animator>();
         checkGM();
         //playButton.onClick.AddListener(TaskOnClick);
+                transitionAnim.Play("fadeMenuEnd");
     }
 
     public void PlayGame()
@@ -70,7 +71,14 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("Escape Quit!");
         }
-
+        if (GameManager.Instance.hasall == true)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+            Debug.Log("Got Variables");
+            WinMenu.SetActive(true);
+        }
     }
 
 
@@ -117,11 +125,6 @@ public class MainMenu : MonoBehaviour
         {
             WindowPortal.SetActive(false);
             WindowLight.SetActive(true); 
-        }
-
-        if (GameManager.Instance.hasBook == true && GameManager.Instance.hasBear && GameManager.Instance.hasBlanket)
-        {
-            WinMenu.SetActive(true);
         }
     }
 

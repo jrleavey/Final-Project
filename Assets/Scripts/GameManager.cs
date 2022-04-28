@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public bool hasBlanket = false;
     public bool firsttime = true;
     public bool isGodModeOn = false;
+    public bool hasall = false;
 
     private static GameManager instance;
     public static GameManager Instance
@@ -31,4 +32,13 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
     }
+    public void Update()
+    {
+        if (hasBear == true && hasBlanket == true && hasBook && true)
+        {
+            hasall = true;
+        }
+    }
 }
+
+

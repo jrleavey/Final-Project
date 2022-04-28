@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -13,12 +14,20 @@ public class DialogueUI : MonoBehaviour
 
     private void Start()
     {
-        typeWriterEffect = GetComponent<TypeWriter>();
-        CloseDialogueBox();
+        Scene currentScene = SceneManager.GetActiveScene();
 
+        if (GameManager.Instance.firsttime == true)
+        {
+            typeWriterEffect = GetComponent<TypeWriter>();
+            CloseDialogueBox();
             ShowDialogue(testDialogue);
-
-
+        }
+        else if (SceneManager.GetActiveScene().name != "HUB" && GameManager.Instance.firsttime == false)
+        {
+            typeWriterEffect = GetComponent<TypeWriter>();
+            CloseDialogueBox();
+            ShowDialogue(testDialogue);
+        }
     }
 
 

@@ -604,6 +604,14 @@ MonoBehaviour:
   transitionAnim: {fileID: 950560144}
   playButton: {fileID: 1870195265}
   transitionTime: 1.5
+  BedPortal: {fileID: 0}
+  ClosetPortal: {fileID: 0}
+  WindowPortal: {fileID: 0}
+  BedLight: {fileID: 0}
+  ClosetLight: {fileID: 0}
+  WindowLight: {fileID: 0}
+  WinMenu: {fileID: 1371484139}
+  Fade: {fileID: 1611865229}
 --- !u!4 &197699330
 Transform:
   m_ObjectHideFlags: 0
@@ -671,6 +679,14 @@ MonoBehaviour:
   transitionAnim: {fileID: 950560144}
   playButton: {fileID: 1870195265}
   transitionTime: 1.5
+  BedPortal: {fileID: 0}
+  ClosetPortal: {fileID: 0}
+  WindowPortal: {fileID: 0}
+  BedLight: {fileID: 0}
+  ClosetLight: {fileID: 0}
+  WindowLight: {fileID: 0}
+  WinMenu: {fileID: 0}
+  Fade: {fileID: 0}
 --- !u!114 &197884717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5801,6 +5817,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326454980}
   m_CullTransparentMesh: 1
+--- !u!1 &1371484139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371484140}
+  m_Layer: 0
+  m_Name: Win_Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371484140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371484139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373510626
 GameObject:
   m_ObjectHideFlags: 0
@@ -6775,6 +6821,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608297774}
   m_CullTransparentMesh: 1
+--- !u!1 &1611865229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5570310516236444575, guid: 289250e1ef411024fb0c4f0885d19937, type: 3}
+  m_PrefabInstance: {fileID: 5570310516360676881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1619020558
 GameObject:
   m_ObjectHideFlags: 0
@@ -8274,7 +8325,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 2433921648a9b2040ad66c7c5d255789, type: 2}
   m_audioClip: {fileID: 8300000, guid: 04d0bad63d13346439f084b002904613, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 1
   Mute: 0
